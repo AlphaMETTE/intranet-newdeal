@@ -1,0 +1,78 @@
+/* ============================================================================
+   INTRANET - STYLES NOSCRIPT (SANS JAVASCRIPT)
+   =========================================================================== */
+
+/* Afficher le menu par défaut si JavaScript n'est pas disponible */
+#menu {
+  position: static !important;
+  width: 100% !important;
+  height: auto !important;
+  background-color: #333 !important;
+  overflow-y: visible !important;
+  padding: 2rem !important;
+  box-shadow: none !important;
+  padding-top: 2rem !important;
+}
+
+#menu.visible {
+  right: 0 !important;
+}
+
+#menu::before {
+  display: none !important;
+}
+
+/* Masquer le bouton menu */
+#header > nav {
+  display: none !important;
+}
+
+/* Afficher les liens du menu */
+#menu .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
+}
+
+#menu .links li a {
+  color: #fff !important;
+  text-decoration: none;
+  border-bottom: none !important;
+  padding: 0.5rem 0 !important;
+}
+
+#menu .links li a:hover {
+  color: #00843d !important;
+}
+
+/* Afficher les actions */
+#menu .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#menu .actions .button {
+  padding: 0.75rem 1.5rem !important;
+  text-align: center;
+}
+
+/* Message pour utiliser JavaScript */
+noscript {
+  display: block;
+  padding: 1.5rem;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  margin: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+noscript::before {
+  content: "⚠️ ";
+}

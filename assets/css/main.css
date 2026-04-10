@@ -1,0 +1,196 @@
+/* ============================================================================
+   INTRANET - STYLES DE BASE ET RESET GLOBAL
+   =========================================================================== */
+
+/* ============================================================================
+   1. RESET CSS ET NORMALISATION
+   =========================================================================== */
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Border box sizing */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Remove default margins and padding */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input::-ms-clear, input::-ms-reveal {
+  display: none;
+}
+
+textarea {
+  resize: vertical;
+  vertical-align: top;
+}
+
+/* Image styles */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+/* Form elements */
+label {
+  cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  cursor: pointer;
+}
+
+/* Lists */
+ul, ol, li {
+  list-style: none;
+}
+
+/* ============================================================================
+   2. SMOOTH SCROLLING ET COMPORTEMENTS
+   =========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================================================
+   3. SÉLECTION DE TEXTE
+   =========================================================================== */
+
+::selection {
+  background-color: rgba(0, 132, 61, 0.2);
+  color: inherit;
+}
+
+::-moz-selection {
+  background-color: rgba(0, 132, 61, 0.2);
+  color: inherit;
+}
+
+/* ============================================================================
+   4. UTILITAIRES DE VISIBILITÉ
+   =========================================================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* ============================================================================
+   5. UTILITAIRES GÉNÉRAUX
+   =========================================================================== */
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.centered {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* Écran d'accueil - Classe pour masquer le contenu initialement */
+body.is-preload {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============================================================================
+   6. WRAPPERS
+   =========================================================================== */
+
+#wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  flex: 1;
+}
+
+/* ============================================================================
+   7. DEFAULTS POUR PRINT
+   =========================================================================== */
+
+@media print {
+  * {
+    background-color: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  
+  a, a:visited {
+    text-decoration: underline;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  @page {
+    margin: 2cm;
+  }
+}
